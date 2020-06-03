@@ -23,7 +23,7 @@ RUN set -eux; \
 	apt-get update; \
 	apt-get install -y --no-install-recommends \
 		gnupg dirmngr \
-		wget ca-certificates \
+		wget ca-certificates gettext-base \
 	; \
 	\
 	ddist() { \
