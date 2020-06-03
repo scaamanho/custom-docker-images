@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Sustituimos valores en ficheros de configuracion
 init-config-files.sh
