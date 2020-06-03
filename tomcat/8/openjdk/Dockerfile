@@ -129,5 +129,9 @@ RUN set -e \
 		exit 1; \
 	fi
 
+COPY run-tomcat.sh ${CATALINA_HOME}/bin
+COPY init-config-files.sh ${CATALINA_HOME}/bin
+RUN chmod +x ${CATALINA_HOME}/bin/run-tomcat.sh && chmod +x ${CATALINA_HOME}/bin/init-config-files.sh
+
 EXPOSE 8080
-CMD ["catalina.sh", "run"]
+CMD ["run-tomcat.sh", "run"]
